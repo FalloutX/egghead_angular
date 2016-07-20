@@ -11,7 +11,7 @@
   </head>
   <body>
     <div ng-app="mainApp">
-        
+
 
       <div ng-controller="FirstCtrl">
         <input type="text" ng-model="data.message">
@@ -21,7 +21,7 @@
 
       <div ng-controller="SecondCtrl">
         <input type="text" ng-model="data.message">
-        <h3>{{data.message}}</h3>
+        <h3>{{reverseText(data.message)}}</h3>
       </div>
 
     </div>

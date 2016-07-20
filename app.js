@@ -7,4 +7,7 @@ angular.module('mainApp', [])
    }])
   .controller('SecondCtrl', ['$scope', 'Data', function($scope, Data) {
     $scope.data = Data;
+    $scope.reverseText = function(text) {
+      return text.split("").reverse().join("");
+    }
   }]);
