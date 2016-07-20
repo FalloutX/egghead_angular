@@ -1,0 +1,43 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egghead Angular.js</title>
+    <link rel="stylesheet" href="vendor/css/foundation.min.css">
+    <link rel="stylesheet" href="app.css">
+
+  </head>
+  <body>
+    <div ng-app="mainApp">
+      <input type="text" ng-model="data.message">
+      <h3>{{data.message}}</h3>
+
+
+      <div ng-controller="FirstCtrl">
+        <input type="text" ng-model="data.message">
+        <h3>{{data.message}}</h3>
+      </div>
+
+
+      <div ng-controller="SecondCtrl">
+        <input type="text" ng-model="data.message">
+        <h3>{{data.message}}</h3>
+      </div>
+
+    </div>
+
+
+
+
+
+    <script src="vendor/js/jquery.js"></script>
+    <script src="vendor/js/what-input.js"></script>
+    <script src="vendor/js/foundation.min.js"></script>
+    <script src="foundation_bootstrap.js"></script>
+    <script src="vendor/js/angular.js"></script>
+    <script src="app.js"></script>
+
+  </body>
+</html>
