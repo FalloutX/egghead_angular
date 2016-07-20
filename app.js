@@ -1,7 +1,10 @@
 angular.module('mainApp', [])
-  .controller('FirstCtrl', ['$scope', function($scope) {
-    $scope.data = {message: "Andy"};
+  .factory('Data', function() {
+    return {message: "Coming from Service"};
+  })
+  .controller('FirstCtrl', ['$scope', 'Data', function($scope, Data) {
+    $scope.data = Data;
    }])
-  .controller('SecondCtrl', ['$scope', function($scope) {
-    $scope.data = {message: "Loki"};
+  .controller('SecondCtrl', ['$scope', 'Data', function($scope, Data) {
+    $scope.data = Data;
   }]);
