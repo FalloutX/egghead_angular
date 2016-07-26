@@ -1,17 +1,14 @@
-angular.module('choreApp', [])
-  .directive('kid', function() {
+angular.module('drinkApp', [])
+  .controller('AppCtrl', ['$scope', function ($scope) {
+    $scope.ctrlFlavor = "blackberry";
+  }])
+  .directive('drink', function () {
     return {
-      restrict: 'E',
+      restrict: 'A',
       scope: {
-        done: "&",
+        flavor: "@"
       },
-      template: '<input type="text" ng-model="chore">' +
-                '{{ chore }}' +
-                '<div class="button" ng-click="done({chore:chore})">I\'m Done!</div>'
+      template: '<div> {{flavor}} </div>'
     };
-  })
-  .controller('choreCtrl', ['$scope', function ($scope) {
-    $scope.logChore = function(chore) {
-      alert(chore + " is done!");
-    };
-  }]);
+
+  });
