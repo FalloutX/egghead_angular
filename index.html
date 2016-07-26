@@ -13,10 +13,10 @@
 
     <div ng-app="phoneApp">
       <div ng-controller="AppCtrl">
-        <div phone dial="callHome(message)"></div>
-        <div phone dial="callHome(message)"></div>
-        <div phone dial="callHome(message)"></div>
-        
+        <phone number="555-1234" network="network" make-call="leaveVoiceMail(message, number)"></phone>
+        <phone number="869-7654" network="network" make-call="leaveVoiceMail(message, number)"></phone>
+        <phone number="911" network="network" make-call="leaveVoiceMail(message, number)"></phone>
+
 
       </div>
 
