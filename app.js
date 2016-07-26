@@ -6,9 +6,10 @@ angular.module('drinkApp', [])
     return {
       restrict: 'A',
       scope: {
-        flavor: "@"
+        flavor: "="
       },
-      template: '<div> {{flavor}} </div>'
+      template:  '<input type="text" ng-model="flavor">' +
+                 '<div> {{flavor}} </div>'
     };
 
   });
